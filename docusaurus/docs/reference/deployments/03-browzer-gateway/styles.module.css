@@ -1,0 +1,48 @@
+.blue {
+    color:blue;
+}
+.blue[aria-selected='true'] {
+  border-bottom-color: blue;
+}
+
+.orange {
+  color: orange;
+}
+.orange[aria-selected='true'] {
+  border-bottom-color: orange;
+}
+
+.green {
+  color: green;
+}
+.green[aria-selected='true'] {
+  border-bottom-color: green;
+}
+
+.red {
+  color: red;
+}
+.red[aria-selected='true'] {
+  border-bottom-color: red;
+}
+
+.black {
+  color: black;
+}
+.black[aria-selected='true'] {
+  border-bottom-color: black;
+}
+
+.yellow {
+  color: yellow;
+}
+.yellow[aria-selected='true'] {
+  border-bottom-color: yellow;
+}
+
+.custom {
+  color: rgb(128, 135, 138);
+}
+.custom[aria-selected='true'] {
+  border-bottom-color: rgb(128, 135, 138);
+}

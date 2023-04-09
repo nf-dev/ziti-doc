@@ -1,6 +1,6 @@
 ---
-id: router-cli-mgmt
-title: Router CLI Mgmt
+id: browzer-gateway-cli-mgmt
+title: BrowZer Gateway CLI Mgmt
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,7 +8,11 @@ import TabItem from '@theme/TabItem';
 import styles from './styles.module.css';
 import CliLogin from '../../../_cli-login.md'
 
-## Managing Routers with the CLI
+:::info Notes
+IGNORE THIS PAGE FOR THE MOMENT.
+:::
+
+## Managing Ziti BrowZer Gateway with the CLI
 
 In this article we are highlighting the most relevant commands and options for managing routers with the `ziti` CLI.
 

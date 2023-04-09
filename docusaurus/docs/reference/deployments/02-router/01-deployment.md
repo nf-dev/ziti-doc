@@ -53,7 +53,7 @@ identity:
 
 ### Create Router {#router-create}
 
-The life cycle of a router begins by calling the controller's management API to create a router. You can do this with [the REST API](/docs/reference/developer/api/) or [the `ziti` CLI](./04-cli-mgmt.md#create-router).
+The life cycle of a router begins by calling the controller's management API to create a router. You can do this with [the REST API](../../developer/api/index.md) or [the `ziti` CLI](./04-cli-mgmt.md#create-router).
 
 ### Enroll Router {#enrollment}
 
@@ -89,7 +89,7 @@ WantedBy=multi-user.target
 
 ### Manage Router {#router-update}
 
-You can manage a router's role attributes, tags, etc. with [the REST API](/docs/reference/developer/api/) or [the `ziti` CLI](./04-cli-mgmt.md#managing-routers-with-the-cli) for more details
+You can manage a router's role attributes, tags, etc. with [the REST API](../../developer/api/index.md) or [the `ziti` CLI](./04-cli-mgmt.md#managing-routers-with-the-cli) for more details
 
 ### Configure Logging
 
