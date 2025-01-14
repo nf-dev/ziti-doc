@@ -5,6 +5,7 @@ Configuration data can be retrieved directly, but it will usually be consumed by
 
 If we've set up a service `ssh` as follows:
 
+```
     $ ziti edge create config ssh-client my-app \
         '{ 
             "hostname" : "ssh.company.com", 
@@ -12,14 +13,15 @@ If we've set up a service `ssh` as follows:
          }'
     
     $ ziti edge create service ssh --configs ssh
- 
+ ```
+
 The SDKs will present this configuration in language specific ways. You can see the data the SDK are working with from the SDK, by specifying configuration types when listing services. 
 
 **NOTES**
 * You can specify `all` to see all the configuration data.
 * In addition to the `config` block which has the embedded configuration data there's also a `configs` section which lists all the associated configurations by ID. All associated configurations will always be listed here, regardless of which configuration types are requested.
 
-
+```
     $ ziti edge list services -j --config-types my-app 'name="ssh"'
     {
         "meta": {
@@ -77,4 +79,5 @@ The SDKs will present this configuration in language specific ways. You can see 
             }
         ]
     }
+```
  

@@ -87,6 +87,7 @@ software the "SO PIN" corresponds to the "Management Key" while "pin" is the sam
     ]}>
 <TabItem value="notwindows">
 
+```
     # the name of the ziti controller you're logging into
     export ZITI_CTRL=local-edge-controller
     # the location of the certificate(s) to use to validate the controller
@@ -118,6 +119,7 @@ software the "SO PIN" corresponds to the "Management Key" while "pin" is the sam
 
     # make an alias for ease
     alias p='pkcs11-tool --module $PKCS11_MODULE'
+```
 
 </TabItem>
 <TabItem value="windows">
@@ -127,6 +129,7 @@ Ensure you use the correct dll. If you use an x86 dll with x64 binaries you'll g
 you update the path to include the folder of libykcs11-1.dll as additional libraries are needed by the pkcs11 driver!
 :::
 
+```
     REM the name of the ziti controller you're logging into
     SET ZITI_CTRL=local-edge-controller
     REM the location of the certificate(s) to use to validate the controller
@@ -161,6 +164,7 @@ you update the path to include the folder of libykcs11-1.dll as additional libra
 
     REM make an alias for ease
     doskey p="c:\Program Files\OpenSC Project\OpenSC\tools\pkcs11-tool.exe" --module %PKCS11_MODULE% $*
+```
 
 </TabItem>
 </Tabs>
@@ -175,22 +179,26 @@ you update the path to include the folder of libykcs11-1.dll as additional libra
     ]}>
 <TabItem value="notwindows">
 
+```
     cd ${HSM_ROOT}
 
     rm -rf ${HSM_NAME}
     mkdir -p ${HSM_NAME}
 
     cd ${HSM_NAME}
+```
 
 </TabItem>
 <TabItem value="windows">
 
+```
     cd /d %HSM_ROOT%
 
     rmdir /s /q %HSM_NAME%
     mkdir %HSM_NAME%
 
     cd /d %HSM_NAME%
+```
 
 </TabItem>
 </Tabs>
@@ -205,6 +213,7 @@ you update the path to include the folder of libykcs11-1.dll as additional libra
     ]}>
     <TabItem value="notwindows">
 
+```
     ziti edge login $ZITI_CTRL:1280 -u $ZITI_USER -p $ZITI_PWD
 
     # create a new identity and output the jwt to a known location
@@ -212,10 +221,12 @@ you update the path to include the folder of libykcs11-1.dll as additional libra
 
     # create a second new identity and output the jwt to a known location
     ziti edge create identity device "${EC_ID}" -o "${HSM_DEST}/${EC_ID}.jwt"
+```
 
 </TabItem>
 <TabItem value="windows">
 
+```
     ziti edge login %ZITI_CTRL%:1280 -u %ZITI_USER% -p %ZITI_PWD%
 
     REM create a new identity and output the jwt to a known location
@@ -223,6 +234,7 @@ you update the path to include the folder of libykcs11-1.dll as additional libra
 
     REM create a second new identity and output the jwt to a known location
     ziti edge create identity device "%EC_ID%" -o "%HSM_DEST%\%EC_ID%.jwt"
+```
 
 </TabItem>
 </Tabs>
@@ -237,21 +249,24 @@ you update the path to include the folder of libykcs11-1.dll as additional libra
     ]}>
 <TabItem value="notwindows">
 
-
+```
     p --init-token --label "ziti-test-token" --so-pin $HSM_SOPIN
 
     # create a couple of keys - one rsa and one ec
     p -k --key-type rsa:2048 --usage-sign --usage-decrypt --login --id $HSM_ID1 --login-type so --so-pin $HSM_SOPIN --label defaultkey
     p -k --key-type EC:prime256v1 --usage-sign --usage-decrypt --login --id $HSM_ID2 --login-type so --so-pin $HSM_SOPIN --label defaultkey
+```
 
 </TabItem>
 <TabItem value="windows">
 
+```
     p --init-token --label "ziti-test-token" --so-pin %HSM_SOPIN%
 
     REM create a couple of keys - one rsa and one ec
     p -k --key-type rsa:2048 --usage-sign --usage-decrypt --login --id %HSM_ID1% --login-type so --so-pin %HSM_SOPIN% --label defaultkey
     p -k --key-type EC:prime256v1 --usage-sign --usage-decrypt --login --id %HSM_ID2% --login-type so --so-pin %HSM_SOPIN% --label defaultkey
+```
 
 </TabItem>
 </Tabs>
@@ -266,14 +281,18 @@ you update the path to include the folder of libykcs11-1.dll as additional libra
     ]}>
 <TabItem value="notwindows">
 
+```
     ziti-tunnel enroll -j "${HSM_DEST}/${RSA_ID}.jwt" -k "pkcs11://${PKCS11_MODULE}?id=${HSM_ID1}&pin=${HSM_PIN}" -v
     ziti-tunnel enroll -j "${HSM_DEST}/${EC_ID}.jwt" -k "pkcs11://${PKCS11_MODULE}?id=${HSM_ID2}&pin=${HSM_PIN}" -v
+```
 
 </TabItem>
 <TabItem value="windows">
 
+```
     ziti-tunnel enroll -j "%HSM_DEST%\%RSA_ID%.jwt" -k "pkcs11://%PKCS11_MODULE%?id=%HSM_ID1%&pin=%HSM_PIN%" -v
     ziti-tunnel enroll -j "%HSM_DEST%\%EC_ID%.jwt" -k "pkcs11://%PKCS11_MODULE%?id=%HSM_ID2%&pin=%HSM_PIN%" -v
+```
 
 </TabItem>
 </Tabs>
@@ -288,6 +307,7 @@ you update the path to include the folder of libykcs11-1.dll as additional libra
     ]}>
 <TabItem value="notwindows">
 
+```
     # if you only have a single edge router this command will work without the need for copy/paste
     EDGE_ROUTER_ID=$(ziti edge list edge-routers | cut -d " " -f2)
 
@@ -313,10 +333,12 @@ you update the path to include the folder of libykcs11-1.dll as additional libra
     # use a browser - or curl to verify the ziti tunneler is listening locally and the traffic has flowed over the ziti network
     curl -H "Host: wttr.in" http://localhost:8000
     curl -H "Host: wttr.in" http://localhost:9000
+```
 
 </TabItem>
 <TabItem value="windows">
 
+```
     REM these two commands can't be copied and pasted - you need to get the result of the first command and use it in the next
     REM run this command and get the id from the first edge-router.
     ziti edge list edge-routers
@@ -349,6 +371,7 @@ you update the path to include the folder of libykcs11-1.dll as additional libra
     type "%HSM_DEST%\example_%EC_ID%.txt"
 
     REM ctrl-break or ctrl-pause to kill the tunnelers
+```
 
 </TabItem>
 </Tabs>
@@ -371,6 +394,7 @@ output would likely look like click one of the tabs to the right. Reminder - it'
 </TabItem>
 <TabItem value="verify-linux" label="Linux/MacOS">
 
+```
     cd@cd-ubuntuvm: # the name of the ziti controller you're logging into
     cd@cd-ubuntuvm: export ZITI_CTRL=local-edge-controller
     cd@cd-ubuntuvm: # the location of the certificate(s) to use to validate the controller
@@ -713,10 +737,12 @@ output would likely look like click one of the tabs to the right. Reminder - it'
     [  25.856]   ERROR github.com/netfoundry/ziti-edge/tunnel/intercept.updateServices: failed to stop intercepting: StopIntercepting not implemented by proxy interceptor
     [  25.856]    INFO github.com/netfoundry/ziti-edge/tunnel/intercept/proxy.(*interceptor).Stop: stopping proxy interceptor
     [  25.856]    INFO github.com/netfoundry/ziti-edge/tunnel/intercept/proxy.(*interceptor).Stop: stopping proxy interceptor
+```
 
 </TabItem>
 <TabItem value="verify-windows" label="Windows">
 
+```
     c:\path\to\yubico-piv-tool-2.0.0\yubikey_windemo>REM the name of the ziti controller you're logging into
 
     c:\path\to\yubico-piv-tool-2.0.0\yubikey_windemo>SET ZITI_CTRL=local-edge-controller
@@ -1113,6 +1139,7 @@ output would likely look like click one of the tabs to the right. Reminder - it'
     [  39.028]    INFO github.com/netfoundry/ziti-edge/tunnel/intercept/proxy.(*interceptor).Stop: stopping proxy interceptor
     [  39.021]    INFO github.com/netfoundry/ziti-edge/tunnel/intercept/proxy.(*interceptor).Stop: stopping proxy interceptor
     REM set the codepage for the cmd prompt so that the output looks nice
+```
 
 </TabItem>
 </Tabs>
