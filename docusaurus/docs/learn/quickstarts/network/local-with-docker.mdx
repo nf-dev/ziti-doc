@@ -78,8 +78,8 @@ docker run \
 ```
 
 ## Create Edge Router Policies
-OpenZiti requires explicit authorization of identities using ([edge router policies](/reference/glossary.md#edge-router-policy)), 
-as well as authorization of services and routers using ([service edge router policies](/reference/glossary.md#service-edge-router-policy)). 
+OpenZiti requires explicit authorization of identities using ([edge router policies](/reference/glossary#edge-router-policy)), 
+as well as authorization of services and routers using ([service edge router policies](/reference/glossary#service-edge-router-policy)). 
 The docker-based quickstart doesn't perform these steps automatically. Run the initialization container one time, after 
 starting the controller as shown
 
@@ -196,10 +196,10 @@ results: 1-1 of 1
 
 - Now that you have your network in place, you probably want to try it out. Head to the
   [Your First Service](/learn/quickstarts/services/index.md) quickstart and start learning how to use OpenZiti.
-- [Install the console](/learn/quickstarts/zac/index.md#using-docker) (web UI)
+- [Install the console](/learn/quickstarts/zac/index#using-docker) (web UI)
 - Add a Second Public Router: In order for multiple routers to form transit links, they need a firewall exception to expose the "link listener" port. The default port is `10080/tcp`.
 - Help
-  - [Change Admin Password](./help/change-admin-password.md)
+  - [Change Admin Password](./help/change-admin-password)
   - [Reset the Quickstart](./help/reset-quickstart.md)
 
 <Wizardly></Wizardly>

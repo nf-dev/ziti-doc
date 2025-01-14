@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 import CliLogin from '/docs/_cli-login.md'
 import LinuxPackageRepo from '/docs/_linux-package-repo.mdx';
 
-This article is about deploying a router as a Linux system service. [The router introduction](/learn/introduction/03-components.md#router) may be helpful to read first.
+This article is about deploying a router as a Linux system service. [The router introduction](/learn/introduction/components#router) may be helpful to read first.
 
 We'll cover the following topics:
 
@@ -18,9 +18,9 @@ We'll cover the following topics:
 
 ## Router Creation
 
-You must create the router in the controller first with [the web console](/guides/deployments/10-linux/30-console.mdx) or [the CLI](/guides/deployments/10-linux/20-router/40-cli-mgmt.md).
+You must create the router in the controller first with [the web console](/guides/deployments/10-linux/30-console.mdx) or [the CLI](/guides/deployments/10-linux/20-router/cli-mgmt).
 
-After [creating the router](/guides/deployments/10-linux/20-router/40-cli-mgmt.md#create-a-router), save the enrollment token (JWT) and provide the file path to the router during the configuration step below.
+After [creating the router](/guides/deployments/10-linux/20-router/cli-mgmt#create-a-router), save the enrollment token (JWT) and provide the file path to the router during the configuration step below.
 
 ## Install the Router Package
 
@@ -101,7 +101,7 @@ sudo systemctl restart ziti-router.service
 ```
 Here's a link to [the configuration reference](/reference/30-configuration/router.md).
 
-Learn more about [managing routers with the CLI](/guides/deployments/10-linux/20-router/40-cli-mgmt.md).
+Learn more about [managing routers with the CLI](/guides/deployments/10-linux/20-router/cli-mgmt).
 
 ## Firewall
 

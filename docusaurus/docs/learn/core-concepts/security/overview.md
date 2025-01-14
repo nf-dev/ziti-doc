@@ -96,7 +96,7 @@ services can be used over an edge router via service edge router policies. Ident
 policies and edge router policies.
 
 All policies in Ziti are represented by a robust [attribute based access control system (ABAC)](https://en.wikipedia.org/wiki/Attribute-based_access_control) based on `roleAttributes`
-properties on entities within the [edge management API](/docs/reference/developer/api/index.md#edge-management-api). `roleAttributes` properties are an array of user defined strings.
+properties on entities within the [edge management API](/docs/reference/developer/api/index#edge-management-api). `roleAttributes` properties are an array of user defined strings.
 Policies support attribute selector properties to determine which entities a policy interacts on. Policies themselves
 are documented in [Policies](./authorization/policies/overview.mdx) section.
 

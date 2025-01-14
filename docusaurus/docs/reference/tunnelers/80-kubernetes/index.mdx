@@ -40,9 +40,9 @@ In the chart above, there are several strategies and solutions for connecting a 
 
 An tunneler can be used to intercept pod egress. One important thing to know is that the tunneler that is used in this way may also be used to "host" services in order to provide ingress to cluster services.
 
-#### [Node Proxy Daemonset](./kubernetes-daemonset.md)
+#### [Node Proxy Daemonset](./kubernetes-daemonset)
 
-Deploying a daemonset of privileged `ziti-edge-tunnel run` pods on selected nodes is a simple way to enable services in a cluster. The daemonset pods intercept egress from pods and provide Ziti DNS to CoreDNS. For more information, see the [node proxy](./kubernetes-daemonset.md) page.
+Deploying a daemonset of privileged `ziti-edge-tunnel run` pods on selected nodes is a simple way to enable services in a cluster. The daemonset pods intercept egress from pods and provide Ziti DNS to CoreDNS. For more information, see the [node proxy](./kubernetes-daemonset) page.
 
 #### [Transparent Proxy Sidecar](./kubernetes-sidecar.md)
 

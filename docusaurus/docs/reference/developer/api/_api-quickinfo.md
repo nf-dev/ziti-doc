@@ -1,3 +1,3 @@
-Ziti provides several APIs. The most relevant Ziti API for an integrator is [the Management API](./index.md#edge-management-api) provided by the Ziti controller. The `ziti edge` CLI and the web UI both use the management API for create, list, update, delete operations on Ziti entities like identities and services.
+Ziti provides several APIs. The most relevant Ziti API for an integrator is [the Management API](./index#edge-management-api) provided by the Ziti controller. The `ziti edge` CLI and the web UI both use the management API for create, list, update, delete operations on Ziti entities like identities and services.
 
-[The edge client API](./index.md#edge-client-api) is also provided by the Ziti controller. This is the API implemented by Ziti Edge SDKs which are used by endpoints to authenticate and discover Ziti services and routers.
+[The edge client API](./index#edge-client-api) is also provided by the Ziti controller. This is the API implemented by Ziti Edge SDKs which are used by endpoints to authenticate and discover Ziti services and routers.

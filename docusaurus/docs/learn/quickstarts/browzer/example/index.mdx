@@ -8,7 +8,7 @@ import Highlight from "/src/components/OpenZitiHighlight";
 import ReactPlayer from 'react-player'
 
 This page will demonstrate adding BrowZer to an existing network that was started using the
-["host it anywhere" quickstart](/learn/quickstarts/network/hosted.md). It will use Ubuntu Linux as well, if
+["host it anywhere" quickstart](/learn/quickstarts/network/hosted). It will use Ubuntu Linux as well, if
 your Linux distribution is different, change the commands accordingly. The August 18 2023 Ziti TV features a full 
 walkthrough and explanation of this whole page. If you are interested in watching a narrated and explained run
 through of this page, watch the video and follow along with the doc here.
@@ -119,7 +119,7 @@ lrwxrwxrwx 1 root zitiweb  59 Aug 17 21:12 privkey.pem -> ../../archive/browzere
 
 BrowZer is built around OpenZiti. You'll need a network deployed. Since this guide is using
 a legitimate 3rd party verifiable certificate from LetsEncrypt, we'll deploy a brand new network by 
-following the steps outlined in the ["host it anywhere"](/learn/quickstarts/network/hosted.md)
+following the steps outlined in the ["host it anywhere"](/learn/quickstarts/network/hosted)
 quickstart with <Highlight style={{fontWeight: "bold"}}>one important exception</Highlight>! 
 We are going to set two variables before running the quickstart to allow the servers to use the LetsEncrypt
 wildcard certificate:
@@ -140,7 +140,7 @@ export ZITI_PKI_ALT_SERVER_KEY="/etc/letsencrypt/live/${wildcard_url}/privkey.pe
 #### Run the Ziti Quickstart
 
 With the `ZITI_PKI_ALT_*` environment variables set, we are ready to follow the 
-__["host it anywhere" quickstart](/learn/quickstarts/network/hosted.md)__ instructions.  Run the quickstart
+__["host it anywhere" quickstart](/learn/quickstarts/network/hosted)__ instructions.  Run the quickstart
 and return here when complete.
 
 <Details>
@@ -217,7 +217,7 @@ curl https://ws.${wildcard_url}:8447
 ### Install the Ziti Admin Console (ZAC)
 
 In this example, we will be protecting the Ziti Administration Console (ZAC) with BrowZer. That means we'll need to
-install ZAC first. Follow [the ZAC install guide](/learn/quickstarts/zac/index.md).
+install ZAC first. Follow [the ZAC install guide](/learn/quickstarts/zac/index).
 After installing ZAC, continue.
 
 ---
@@ -325,9 +325,9 @@ created.
 <Details>
 <summary>Install BrowZer</summary>
 
-BrowZer is ready to be installed. The [main BrowZer page](/learn/quickstarts/browzer/index.md) has two sections showing you how to
-install BrowZer either by [cloning from GitHub](/learn/quickstarts/browzer/index.md#cloning-from-github)
-or by [Running via Docker](/learn/quickstarts/browzer/index.md#running-via-docker). I have
+BrowZer is ready to be installed. The [main BrowZer page](/learn/quickstarts/browzer/index) has two sections showing you how to
+install BrowZer either by [cloning from GitHub](/learn/quickstarts/browzer/index#cloning-from-github)
+or by [Running via Docker](/learn/quickstarts/browzer/index#running-via-docker). I have
 used the "clone" approach to run my BrowZer (and ZAC).
 
 Follow one of those methods and ensure BrowZer is up and running.

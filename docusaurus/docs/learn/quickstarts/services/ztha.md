@@ -19,7 +19,7 @@ to any network be it host network, local network, the internet, private network,
 ### Simple HTTP Solution Overview - Before Ziti<br/>
 ![before OpenZiti](./before-openziti.png)
 
-The important aspect of this diagram is to notice that the HTTP server is provisioned on the [underlay](/reference/glossary.md#underlay)
+The important aspect of this diagram is to notice that the HTTP server is provisioned on the [underlay](/reference/glossary#underlay)
 network and requires a hole through the firewall to allow clients to connect.
 
 ### Simple HTTP Solution - After Ziti
@@ -27,7 +27,7 @@ network and requires a hole through the firewall to allow clients to connect.
 
 After OpenZiti, we can see that there is no longer an open firewall to allow access to the HTTP server. Instead, the HTTP client 
 will have its network requests intercepted by an OpenZiti tunneler. Once intercepted, the packets are then delivered to the OpenZiti
-[overlay](/reference/glossary.md#network-overlay-overlay) fabric which has the responsibility to deliver the intercepted packets to the
+[overlay](/reference/glossary#network-overlay-overlay) fabric which has the responsibility to deliver the intercepted packets to the
 target identity. Once delivered to the target identity, in this example, the traffic will offload back to the underlay network to be 
 sent to the final destination: the HTTP Server.
 
@@ -48,7 +48,7 @@ simply print out the "docker whale" when it's connected to. (This guide will not
 HTTP server which is listening)  If you are familiar with docker and wish to use the exact same example as shown here, simply run the 
 container with: `docker run -d --rm --name web-test -p 80:8000 openziti/hello-world`. 
 
-If you have used the [Local - Docker Compose](/learn/quickstarts/network/local-docker-compose.md) quickstart 
+If you have used the [Local - Docker Compose](/learn/quickstarts/network/local-docker-compose) quickstart 
 to provision your OpenZiti overlay network, you will have already this HTTP server available to use immediately. 
 
 ### Prerequisite - HTTP Client Tunneler
@@ -66,10 +66,10 @@ another tunneler nor will you need to create another identity.
 > 
 ### Prerequisite - CLI
 If you plan to use the `ziti` CLI tool, you will need to download and get the `ziti` executable on your path. If you have 
-followed the [Local - No Docker](/learn/quickstarts/network/local-no-docker.md) quickstart, this will have been done for you and the executable will be located in `~/.ziti/quickstart/$(hostname -s)/ziti-bin/`.
+followed the [Local - No Docker](/learn/quickstarts/network/local-no-docker) quickstart, this will have been done for you and the executable will be located in `~/.ziti/quickstart/$(hostname -s)/ziti-bin/`.
 Also, the .env file the quickstart emits can be used to put this folder on your path by simply sourcing that file. For example, if you
-followed either the [Local - No Docker](/learn/quickstarts/network/local-no-docker.md) or 
-[Host Ziti Anywhere](/learn/quickstarts/network/hosted.md) quickstart, you should have a file that can be sourced. Here is an example of 
+followed either the [Local - No Docker](/learn/quickstarts/network/local-no-docker) or 
+[Host Ziti Anywhere](/learn/quickstarts/network/hosted) quickstart, you should have a file that can be sourced. Here is an example of 
 my personal "Local - No Docker" result when sourcing that file:
 
 ```textell
@@ -244,7 +244,7 @@ Hello World
 
 ### Ziti Admin Console (ZAC)
 
-Optionally, you may [install the ZAC](/learn/quickstarts/zac/index.md) to manage your network with a UI.
+Optionally, you may [install the ZAC](/learn/quickstarts/zac/index) to manage your network with a UI.
 
 ### Testing Everything Works
 
