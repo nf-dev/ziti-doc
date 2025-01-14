@@ -281,7 +281,7 @@ You need to install the required [Custom Resource Definitions](https://kubernete
 kubectl apply \
    --filename https://github.com/cert-manager/cert-manager/releases/latest/download/cert-manager.crds.yaml
 kubectl apply \
-   --filename https://raw.githubusercontent.com/cert-manager/trust-manager/v0.4.0/deploy/crds/trust.cert-manager.io_bundles.yaml
+   --filename https://raw.githubusercontent.com/cert-manager/trust-manager/v0.7.0/deploy/crds/trust.cert-manager.io_bundles.yaml
 ```
 
 #### Add the OpenZiti Helm Repository
