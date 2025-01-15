@@ -20,6 +20,28 @@ function clone_or_pull {
   fi
 }
 
+fix_helm_ziti_edge_tunnel() {
+  local _target="${ZITI_DOC_GIT_LOC}/helm-charts/charts/ziti-edge-tunnel/README.md"
+  echo "fixing $_target to work with docusaurus"
+  sed -i 's|<https://openziti.io>|\&lt;https://openziti.io>|g' "$_target"
+  sed -i 's|<https://github.com/openziti/ziti-tunnel-sdk-c>|\&lt;https://github.com/openziti/ziti-tunnel-sdk-c>|g' "$_target"
+  sed -i 's#sresponse\\\\s<|>\$#sresponse\\\\s\&lt;|>\$#g' "$_target"
+}
+
+fix_helm_ziti_controller() {
+  local _target="${ZITI_DOC_GIT_LOC}/helm-charts/charts/ziti-controller/README.md"
+  echo "fixing $_target to work with docusaurus"
+  sed -i 's/{release}/\&lbrace;release}/g' "$_target"
+  sed -i 's/{namespace}/\&lbrace;namespace}/g' "$_target"
+  sed -i 's/{port}/\&lbrace;port}/g' "$_target"
+}
+
+fix_helm_ziti_router() {
+  local _target="${ZITI_DOC_GIT_LOC}/helm-charts/charts/ziti-router/README.md"
+  echo "fixing $_target to work with docusaurus"
+  sed -i 's/{{ release }}/\&lbrace;\&lbrace; release }}/g' "$_target"
+}
+
 set -e
 
 script_root="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
@@ -81,6 +103,10 @@ if [[ "${SKIP_GIT}" == no ]]; then
   clone_or_pull "https://github.com/openziti/helm-charts" "helm-charts" >/dev/null
   clone_or_pull "https://github.com/openziti-test-kitchen/kubeztl" "kubeztl" >/dev/null
   clone_or_pull "https://github.com/openziti/desktop-edge-win" "desktop-edge-win" >/dev/null
+
+  fix_helm_ziti_edge_tunnel
+  fix_helm_ziti_controller
+  fix_helm_ziti_router
 fi
 
 if [[ "${SKIP_CLEAN}" == no ]]; then
