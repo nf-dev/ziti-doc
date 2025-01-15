@@ -15,11 +15,11 @@ by hostname instead of IP address.
 
 ![Diagram of solution](./sidecar-diagram.svg)
 
-[Here's some detail on how the various intercept modes work on Linux](/docs/reference/tunnelers/linux)
+[Here's some detail on how the various intercept modes work on Linux](../../../reference/tunnelers/60-linux/index.mdx)
 
 ## Prerequisites
 
-- Complete the [Minikube Quickstart](/docs/learn/quickstarts/network/local-kubernetes). This guide
+- Complete the [Minikube Quickstart](../../../learn/quickstarts/network/local-kubernetes.mdx). This guide
   uses the controller and router that are created in the Minikube Quickstart.
 - Admin-level access to a Kubernetes cluster via `kubectl`.
 

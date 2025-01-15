@@ -1,7 +1,7 @@
 
 The tunneller can run with zero or more identities loaded, and needs at least one to make OpenZiti services available on
 the host. Adding an identity means providing a JWT enrollment token which is used by the tunneller to obtain a client
-certificate from the OpenZiti controller. [Learn more about OpenZiti Identities](/learn/core-concepts/identities/overview.mdx).
+certificate from the OpenZiti controller. [Learn more about OpenZiti Identities](../../../learn/core-concepts/identities/overview.mdx).
 
 ### Add a Single Identity
 
@@ -11,7 +11,7 @@ Root and members of group `ziti` may add an identity without restarting.
 sudo ziti-edge-tunnel add --jwt "$(< ./in-file.jwt)" --identity myIdentityName
 ```
 
-[Learn more about enrolling](/learn/core-concepts/identities/20-enrolling.md).
+[Learn more about enrolling](../../../learn/core-concepts/identities/20-enrolling.md).
 
 ### Load Identities Directory
 

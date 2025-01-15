@@ -222,7 +222,7 @@ export default function Home() {
                     <Link to={"/docs/learn/introduction/"}> our docs</Link> are there to help you understand any extra details you need help
                     ironing out. If the docs aren't complete or aren't helpful, we love seeing issues filed for how to improve.
                     Or, if you're feeling up for it, we'd love to see any PRs to make the docs better you wish to
-                    contribute. You'll find a more extensive list of the <Link to={"/docs/learn/quickstarts/network/"}> quickstarts
+                    contribute. You'll find a more extensive list of the <Link to={"/docs/learn/quickstarts/"}> quickstarts
                     we have here.</Link>
                 </p>
             </OpenZitiHorizontalSection>

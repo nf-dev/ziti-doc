@@ -97,9 +97,9 @@ This includes the protocol(s) used for router connections and how those connecti
         to indicate a controller address migration. Should only be specified when the new listener
         address is reachable as clients will begin to use the new value on restart
   - `peerHeartbeats` - (optional) set of options for configuring heartbeats to other controllers in
-    the cluster. See [heartbeats](./conventions.md/#heartbeats).
+    the cluster. See [heartbeats](./conventions.md#heartbeats).
   - `routerHeartbeats` - (optional) set of options for configuring heartbeats to routers.
-    See [heartbeats](./conventions.md/#heartbeats).
+    See [heartbeats](./conventions.md#heartbeats).
 
 Example w/o options:
 

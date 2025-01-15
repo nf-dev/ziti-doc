@@ -59,7 +59,7 @@ confident you understand the risks involved in doing so.
 
 This flow allows you to pre-create identities for a 3rd party CA with distinct role attributes. This flow is similar to the One Time Token flow from above except that it expects that a private key and certificate have
 already been created on or distributed to the machine that is about to enroll and that the certificate presented is
-issued by a validated, [third party CA](/learn/core-concepts/pki#third-party-ca-optional).
+issued by a validated, [third party CA](../../../learn/core-concepts/pki.mdx#third-party-ca-optional).
 
 Follow these steps to enroll a 3rd Party CA - one-time token identity:
 
@@ -85,7 +85,7 @@ automatic. Enrolling the identity will create it with the default role attribute
 Like "3rd Party CA - One Time Token" - this flow expects that a private key and certificate have
 already been created on or distributed to the machine that is about to enroll.
 The certificate presented to the controller must be issued by a [third
-party CA](/learn/core-concepts/pki#third-party-ca-optional) that was already
+party CA](../../../learn/core-concepts/pki.mdx#third-party-ca-optional) that was already
 imported and verified in the controller with the
 `isAutoCaEnrollmentEnabled` property set to true.
 

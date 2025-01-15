@@ -93,7 +93,7 @@ does the necessary instrumentation of the web application automatically, on the 
 is being loaded from the web server to the user's browser.
 
 To enable BrowZer in a given network, it must be configured. For information
-on how to add BrowZer to a network, follow [the BrowZer quickstart guide](/learn/quickstarts/browzer/index)
+on how to add BrowZer to a network, follow [the BrowZer quickstart guide](../quickstarts/browzer/index.mdx)
 
 ## Logical Components
 

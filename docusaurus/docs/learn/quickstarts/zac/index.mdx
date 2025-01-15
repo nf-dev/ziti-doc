@@ -16,8 +16,8 @@ explore a [network](/learn/introduction/index.mdx).
 
 With ZAC 3.0+, the ZAC has been transformed to a single-page-application (SPA) allowing you to download an artifact 
 from GitHub and host the ZAC however you like. The controller was also modified to allow the ZAC to be hosted by the 
-controller. These steps are applicable to both the [Local - No Docker](/learn/quickstarts/network/local-no-docker) 
-and the [hosted yourself](/learn/quickstarts/network/hosted) deployments. When complete, the controller will host
+controller. These steps are applicable to both the [Local - No Docker](../network/local-no-docker.mdx) 
+and the [hosted yourself](../network/hosted.mdx) deployments. When complete, the controller will host
 the ZAC on the management API web binding.
 
 1. On the controller host, download any console version >= 3.0.0 from GitHub.
@@ -39,7 +39,7 @@ the ZAC on the management API web binding.
     unzip -d ${ZITI_HOME}/console ./ziti-console.zip
     ```
 
-1. In **${ZITI_HOME}/$(hostname -s).yaml**, add a web API binding `zac` in the list containing `edge-management`.
+1. In **$&lbrace;ZITI_HOME}/$(hostname -s).yaml**, add a web API binding `zac` in the list containing `edge-management`.
 
     ```text
           - binding: zac
@@ -64,7 +64,7 @@ the ZAC on the management API web binding.
 ### Copy PKI From Controller
 
 It's a good idea to use TLS everywhere. To do this, you'll need to provide ZAC a key and a certificate.
-If you have used the [Local - With Docker](/learn/quickstarts/network/local-with-docker) quickstart to start
+If you have used the [Local - With Docker](../network/local-with-docker.mdx) quickstart to start
 the network you can copy the certificates generated when the controller started.
 Shown is an example which copies the certs from the OpenZiti container and uses them with ZAC. We'll copy the files
 from the docker named volume `myPersistentZitiFiles` and put them into a folder at `$HOME/.ziti/zac-pki`.
@@ -108,7 +108,7 @@ internet search should show you how to accomplish this.
 
 ## Docker Compose
 
-If you have followed the [Local - Docker Compose](/learn/quickstarts/network/local-docker-compose) quickstart you will have the ZAC
+If you have followed the [Local - Docker Compose](../network/local-docker-compose.mdx) quickstart you will have the ZAC
 running already. It's now included with both the default docker-compose file and the simplified-docker-compose file.
 Both compose files will start and expose the ZAC ports on 1408/8443.
 
@@ -147,6 +147,6 @@ internet search should show you how to accomplish this.
     3. Example using AWS "host it anywhere":
        ![host it anywhere](./zac_configure_hia.png)
 
-3. Optionally, [**change admin's password**](/learn/quickstarts/network/help/change-admin-password#ziti-console)
+3. Optionally, [**change admin's password**](../network/help/change-admin-password.mdx#ziti-console)
 
 <Wizardly></Wizardly>

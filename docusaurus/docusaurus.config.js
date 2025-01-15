@@ -3,8 +3,9 @@
 
 // This docusaurus.config.js is used by GitHub Pages to build the site with baseUrl: '/docusaurus/'
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+//const lightCodeTheme = require('prism-react-renderer/themes/github');
+//const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const { themes: prismThemes } = require('prism-react-renderer');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -415,8 +416,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} NetFoundry Inc.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+		  theme: prismThemes.github,
+		  darkTheme: prismThemes.dracula,
       },
     },
 };

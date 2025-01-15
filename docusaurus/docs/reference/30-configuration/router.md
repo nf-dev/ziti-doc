@@ -119,7 +119,7 @@ The `ctrl` section configures how the router will connect to the controller.
 - `endpoints` - (optional) a list of controller addresses. Either `endpoint` or `endpoints` is
   required. If both are provided, `endpoints` will be ignored
 - `heartbeats` - (optional) set of options for configuring heartbeats to the controller(s).
-  See [heartbeats](./conventions.md/#heartbeats).
+  See [heartbeats](./conventions.md#heartbeats).
 - `options` - a set of option which includes the below options and those defined
   in [channel options](conventions.md#channel)
 

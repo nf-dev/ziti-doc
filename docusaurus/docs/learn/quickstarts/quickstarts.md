@@ -45,4 +45,4 @@ overlay with other people you want to have access to your [network](/learn/intro
 * [Run Everything Locally - no Docker](./network/local-no-docker)
 * [Run Everything Locally - using Docker](./network/local-with-docker)
 * [Run Everything Locally - Docker Compose](./network/local-docker-compose)
-* [Run Everything Hosted](./network/hosted)
+* [Run Everything Hosted](./network/hosted.mdx)
