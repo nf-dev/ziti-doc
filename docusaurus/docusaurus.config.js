@@ -244,7 +244,11 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/openziti/ziti-doc/tree/main/docusaurus',
-          beforeDefaultRemarkPlugins: [remarkGithubAdmonitionsToDirectives],
+          beforeDefaultRemarkPlugins: [remarkGithubAdmonitionsToDirectives, ],
+          remarkPlugins: [
+            require('./src/plugins/remark/remark-yaml-table'),
+            require('./src/plugins/remark/remark-code-block'),
+          ],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -414,8 +418,9 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} NetFoundry Inc.`,
       },
       prism: {
-		  theme: prismThemes.github,
+		  theme: prismThemes.oneLight,
 		  darkTheme: prismThemes.dracula,
+          additionalLanguages: ['python', 'java', 'csharp', 'go', 'bash'],
       },
     },
 };
