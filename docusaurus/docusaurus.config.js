@@ -418,8 +418,11 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} NetFoundry Inc.`,
       },
       prism: {
-		  theme: prismThemes.github,
-		  darkTheme: prismThemes.dracula,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
+        // scala necessary to avoid Cannot set properties of undefined (setting 'triple-quoted-string')
+        // see https://github.com/Redocly/redoc/issues/2511
+        additionalLanguages: ['python', 'java', 'csharp', 'go', 'bash', 'scala'],
       },
     },
 };
