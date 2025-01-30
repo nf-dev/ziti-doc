@@ -2,9 +2,8 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 // This docusaurus.config.js is used by GitHub Pages to build the site with baseUrl: '/docusaurus/'
+import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
 
-//const lightCodeTheme = require('prism-react-renderer/themes/github');
-//const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const { themes: prismThemes } = require('prism-react-renderer');
 
 /** @type {import('@docusaurus/types').Config} */
@@ -37,7 +36,7 @@ const config = {
     mermaid: true,
   },
   themes: ['@docusaurus/theme-mermaid'],
-
+  
   plugins: [
     [
       '@docusaurus/plugin-content-docs',
@@ -244,9 +243,12 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/openziti/ziti-doc/tree/main/docusaurus',
-
+          editUrl: 'https://github.com/openziti/ziti-doc/tree/main/docusaurus',
+          beforeDefaultRemarkPlugins: [remarkGithubAdmonitionsToDirectives, ],
+          remarkPlugins: [
+            require('./src/plugins/remark/remark-yaml-table'),
+            require('./src/plugins/remark/remark-code-block'),
+          ],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -314,7 +316,7 @@ const config = {
         sidebar: {
           hideable: true,
           autoCollapseCategories: true,
-        }
+        },
       },
       navbar: {
         title: '',
@@ -416,8 +418,11 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} NetFoundry Inc.`,
       },
       prism: {
-		  theme: prismThemes.github,
-		  darkTheme: prismThemes.dracula,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
+        // scala necessary to avoid Cannot set properties of undefined (setting 'triple-quoted-string')
+        // see https://github.com/Redocly/redoc/issues/2511
+        additionalLanguages: ['python', 'java', 'csharp', 'go', 'bash', 'scala'],
       },
     },
 };

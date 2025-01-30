@@ -28,6 +28,7 @@
     "echarts": "^5.6.0",
     "echarts-for-react": "^3.0.2",
     "jquery": "^3.7.1",
+    "js-yaml": "^4.1.0",
     "prism-react-renderer": "2.4.1",
     "react": "^19.0.0",
     "react-device-detect": "^2.2.3",
@@ -35,7 +36,9 @@
     "react-github-btn": "^1.4.0",
     "react-helmet": "^6.1.0",
     "react-player": "^2.16.0",
-    "redocusaurus": "^2.2.1"
+    "redocusaurus": "^2.2.1",
+    "remark-github-admonitions-to-directives": "^2.1.0",
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.7.0",

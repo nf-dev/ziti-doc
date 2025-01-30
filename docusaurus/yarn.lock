@@ -54,6 +54,11 @@
   resolved "https://registry.yarnpkg.com/@algolia/client-common/-/client-common-5.19.0.tgz#efddaaf28f0f478117c2aab22d19c99b06f99761"
   integrity sha512-2ERRbICHXvtj5kfFpY5r8qu9pJII/NAHsdgUXnUitQFwPdPL7wXiupcvZJC7DSntOnE8AE0lM7oDsPhrJfj5nQ==
 
+"@algolia/client-common@5.20.0":
+  version "5.20.0"
+  resolved "https://registry.yarnpkg.com/@algolia/client-common/-/client-common-5.20.0.tgz#0b6b96c779d30afada68cf36f20f0c280e3f1273"
+  integrity sha512-iSTFT3IU8KNpbAHcBUJw2HUrPnMXeXLyGajmCL7gIzWOsYM4GabZDHXOFx93WGiXMti1dymz8k8R+bfHv1YZmA==
+
 "@algolia/client-insights@5.19.0":
   version "5.19.0"
   resolved "https://registry.yarnpkg.com/@algolia/client-insights/-/client-insights-5.19.0.tgz#81ff8eb3df724f6dd8ea3f423966b9ef7d36f903"
@@ -84,7 +89,7 @@
     "@algolia/requester-fetch" "5.19.0"
     "@algolia/requester-node-http" "5.19.0"
 
-"@algolia/client-search@5.19.0", "@algolia/client-search@^5.19.0":
+"@algolia/client-search@5.19.0":
   version "5.19.0"
   resolved "https://registry.yarnpkg.com/@algolia/client-search/-/client-search-5.19.0.tgz#04fc5d7e26d41c99144eb33eedb0ea6f9b1c0056"
   integrity sha512-Ctg3xXD/1VtcwmkulR5+cKGOMj4r0wC49Y/KZdGQcqpydKn+e86F6l3tb3utLJQVq4lpEJud6kdRykFgcNsp8Q==
@@ -93,6 +98,16 @@
     "@algolia/requester-browser-xhr" "5.19.0"
     "@algolia/requester-fetch" "5.19.0"
     "@algolia/requester-node-http" "5.19.0"
+
+"@algolia/client-search@^5.19.0":
+  version "5.20.0"
+  resolved "https://registry.yarnpkg.com/@algolia/client-search/-/client-search-5.20.0.tgz#4b847bda4bef2eee8ba72ef3ce59be612319e8d0"
+  integrity sha512-KL1zWTzrlN4MSiaK1ea560iCA/UewMbS4ZsLQRPoDTWyrbDKVbztkPwwv764LAqgXk0fvkNZvJ3IelcK7DqhjQ==
+  dependencies:
+    "@algolia/client-common" "5.20.0"
+    "@algolia/requester-browser-xhr" "5.20.0"
+    "@algolia/requester-fetch" "5.20.0"
+    "@algolia/requester-node-http" "5.20.0"
 
 "@algolia/events@^4.0.1":
   version "4.0.1"
@@ -136,6 +151,13 @@
   dependencies:
     "@algolia/client-common" "5.19.0"
 
+"@algolia/requester-browser-xhr@5.20.0":
+  version "5.20.0"
+  resolved "https://registry.yarnpkg.com/@algolia/requester-browser-xhr/-/requester-browser-xhr-5.20.0.tgz#998fd5c1123fbc49b664c484c6b0cd7cefc6a1fa"
+  integrity sha512-t6//lXsq8E85JMenHrI6mhViipUT5riNhEfCcvtRsTV+KIBpC6Od18eK864dmBhoc5MubM0f+sGpKOqJIlBSCg==
+  dependencies:
+    "@algolia/client-common" "5.20.0"
+
 "@algolia/requester-fetch@5.19.0":
   version "5.19.0"
   resolved "https://registry.yarnpkg.com/@algolia/requester-fetch/-/requester-fetch-5.19.0.tgz#59fe52733a718fc23bde548b377b52baf7228993"
@@ -143,12 +165,26 @@
   dependencies:
     "@algolia/client-common" "5.19.0"
 
+"@algolia/requester-fetch@5.20.0":
+  version "5.20.0"
+  resolved "https://registry.yarnpkg.com/@algolia/requester-fetch/-/requester-fetch-5.20.0.tgz#fed4f135f22c246ce40cf23c9d6518884be43e5e"
+  integrity sha512-FHxYGqRY+6bgjKsK4aUsTAg6xMs2S21elPe4Y50GB0Y041ihvw41Vlwy2QS6K9ldoftX4JvXodbKTcmuQxywdQ==
+  dependencies:
+    "@algolia/client-common" "5.20.0"
+
 "@algolia/requester-node-http@5.19.0":
   version "5.19.0"
   resolved "https://registry.yarnpkg.com/@algolia/requester-node-http/-/requester-node-http-5.19.0.tgz#edbd58158d9dec774d608fbf2b2196d0ca4b257c"
   integrity sha512-p6t8ue0XZNjcRiqNkb5QAM0qQRAKsCiebZ6n9JjWA+p8fWf8BvnhO55y2fO28g3GW0Imj7PrAuyBuxq8aDVQwQ==
   dependencies:
     "@algolia/client-common" "5.19.0"
+
+"@algolia/requester-node-http@5.20.0":
+  version "5.20.0"
+  resolved "https://registry.yarnpkg.com/@algolia/requester-node-http/-/requester-node-http-5.20.0.tgz#920a9488be07c0521951da92f36be61f47c4d0e0"
+  integrity sha512-kmtQClq/w3vtPteDSPvaW9SPZL/xrIgMrxZyAgsFwrJk0vJxqyC5/hwHmrCraDnStnGSADnLpBf4SpZnwnkwWw==
+  dependencies:
+    "@algolia/client-common" "5.20.0"
 
 "@ampproject/remapping@^2.2.0":
   version "2.3.0"
@@ -2846,10 +2882,17 @@
     "@types/history" "^4.7.11"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^19.0.7":
+"@types/react@*":
   version "19.0.7"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-19.0.7.tgz#c451968b999d1cb2d9207dc5ff56496164cf511d"
   integrity sha512-MoFsEJKkAtZCrC1r6CM8U22GzhG7u2Wir8ons/aCKH6MBdD1ibV24zOSSkdZVUKqN5i396zG5VKLYZ3yaUZdLA==
+  dependencies:
+    csstype "^3.0.2"
+
+"@types/react@^19.0.7":
+  version "19.0.8"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.0.8.tgz#7098e6159f2a61e4f4cef2c1223c044a9bec590e"
+  integrity sha512-9P/o1IGdfmQxrujGbIMDyYaaCykhLKc0NGCtYcECNUr9UAaDe4gwvV9bR6tvd5Br1SG0j+PBpbKr2UYY8CwqSw==
   dependencies:
     csstype "^3.0.2"
 
@@ -9133,6 +9176,16 @@ remark-gfm@^4.0.0:
     remark-parse "^11.0.0"
     remark-stringify "^11.0.0"
     unified "^11.0.0"
+
+remark-github-admonitions-to-directives@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/remark-github-admonitions-to-directives/-/remark-github-admonitions-to-directives-2.1.0.tgz#5bdb5deb3e1d6ee7a1427aeea9e27e7b3ea96ff4"
+  integrity sha512-bI3E4Oj1pKY3ym2IQrrVCdORgEu0+mSrWgpCYFNy8QvytfnLs/nAacVPjkWU/JzDMUiQio2k4nTFP7bsIr9TSA==
+  dependencies:
+    "@types/mdast" "^4.0.0"
+    mdast-util-directive "^3.0.0"
+    unified "^11.0.0"
+    unist-util-visit "^5.0.0"
 
 remark-mdx@^3.0.0:
   version "3.1.0"
