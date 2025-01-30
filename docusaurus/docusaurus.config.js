@@ -418,9 +418,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} NetFoundry Inc.`,
       },
       prism: {
-		  theme: prismThemes.oneLight,
+		  theme: prismThemes.github,
 		  darkTheme: prismThemes.dracula,
-          additionalLanguages: ['python', 'java', 'csharp', 'go', 'bash'],
       },
     },
 };
