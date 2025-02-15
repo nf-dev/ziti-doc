@@ -83,6 +83,26 @@ docker run -it --rm --name temp \
   cp /persistent/pki/ziti-edge-controller-intermediate/certs/ziti-edge-controller-server.chain.pem /zac-pki
 ```
 
+### Setting Available Controller URL's
+
+You'll need to define a list of pre-approved Ziti Edge Controller URLs to connect to your
+controller. To configure this, you'll first need to make sure you pull the latest version of ZAC. Either from source,
+or via docker. The ZAC should be at version 3.9.0+ for this to apply.
+
+Then, you must define an environment variable called ZAC_CONTROLLER_URLS with a comma-separated list of URLs.
+
+For Example:
+
+On Mac/Linux:
+```
+export ZAC_CONTROLLER_URLS=https://localhost:1280,https://example.domain.io:443
+```
+
+On Windows:
+```
+set ZAC_CONTROLLER_URLS=https://10ca1host:1280,https://example.domain.io:443
+```
+
 ### Starting ZAC
 
 With the certificates copied, you will be able to start the ZAC using one Docker command. Also notice the command
