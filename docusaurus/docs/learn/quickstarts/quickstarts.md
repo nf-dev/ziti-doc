@@ -13,7 +13,7 @@ Zero Trust right into your application you can still get started by using one or
 [tunneling apps](/learn/core-concepts/clients/choose.mdx).
 
 :::info
-Quickstarts are short-lived networks that are great for learning how to Ziti all the thigs! For long-lived production deployments, see the [deployment guides](/docs/category/deployments).
+Quickstarts are short-lived networks that are great for learning how to Ziti all the things! For long-lived production deployments, see the [deployment guides](/docs/category/deployments).
 :::
 
 :::tip 
